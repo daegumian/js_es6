@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <ul>
+        <li>목록1</li>
+        <li>목록2</li>
+        <li>목록3</li>
+        <li>목록4</li>
+    </ul>
+
+<script>
+        var li = document.querySelectorAll('li');
+
+        // i = 0, 1, 2, 3, ....
+        for (let i = 0; i < li.length; i++) { //별로 좋지 않은 방법 -> 위임이 있으니! 그러나 let의 특징을 알 수 있음
+            li[i].addEventListener('click', function () {
+                console.log(i);
+            })
+        }
+        // console.log(i);
+
+        const str1 = 'parkdonghoon'; 
+        const str2 = [...str1]; //p,a,r,k,d,o,n,g,h,o,o,n
+        console.log(str2); 
+
+    </script>
+</body>
+
+</html>

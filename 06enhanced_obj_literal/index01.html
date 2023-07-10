@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        //객체표현
+        let name = '박동훈';
+        let age = 33;
+        let setName = function(){
+            return this.name;
+        }
+
+        const obj = {name : name, age : age, setName : setName};
+        console.log(obj);
+
+        //향상된 오브젝트 리터럴 - 속성과 값이 같으면 1개만 기입( O ) 즉, 줄여서 써도 되는구나~정도로 기억
+        const obj2 = {name, age, setName};
+        console.log(obj2);
+        const{name : a, age: b, setName:c} = obj2;
+        console.log(a,b,c); //박동훈 33 f()~
+
+        ////////////////////////////////////////////////////////////////////////
+        // const obj3 = { requset : function(){} }; // 가능
+        const obj3 = {requset(){}};
+        console.log(obj3); //funtion(){}~~
+
+    </script>
+    
+</body>
+</html>
